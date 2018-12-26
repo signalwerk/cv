@@ -1,4 +1,4 @@
-# Stefan Huber – Curriculum Vitae
+# Stefan Huber · Curriculum Vitae
 Curriculum Vitae of [→ Stefan Huber](https://signalwerk.github.io)
 
 ### Thanks
