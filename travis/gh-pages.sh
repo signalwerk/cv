@@ -47,8 +47,13 @@ cd $ROOT_DIR
 # Clean out existing contents
 echo "   * clean up"
 cd $DEPLOY_DIR
+ls -las
 # Recursively clean current directory but not dir named .git
- rm -r $(ls -a | grep -v '^\.\.$' | grep -v '^\.$' | grep -v '^\.git$')	
+rm -r $(ls -a | grep -v '^\.\.$' | grep -v '^\.$' | grep -v '^\.git$')
+
+echo "   * clean up – end"
+ls -las
+
 cd $ROOT_DIR
 
 
@@ -62,6 +67,12 @@ echo "   * build info"
 
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
+
+echo "   * build status"
+ls -las
+echo "   * git status"
+git status --porcelain
+wc -l
 
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 if [ $(git status --porcelain | wc -l) -lt 1 ]; then
