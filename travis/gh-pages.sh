@@ -52,7 +52,7 @@ cd $DEPLOY_DIR
 ls -las
 # Recursively clean current directory but not dir named .git
 #find . -maxdepth 1 -mindepth 1 -not -name .git -exec rm -rf {} \;
-rm -r $(ls -a | grep -v '^\.\.$' | grep -v '^\.$' | grep -v '^\.git$')	
+rm -r $(ls -a | grep -v '^\.\.$' | grep -v '^\.$' | grep -v '^\.git$')
 echo "   * clean up done"
 ls -las
 cd $ROOT_DIR
@@ -68,6 +68,10 @@ ls -las
 cd $DEPLOY_DIR
 echo "   * build info"
 ls -las
+echo "   * git status"
+git status --porcelain
+git status --porcelain | wc -l
+echo "   * git status status"
 
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
