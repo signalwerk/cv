@@ -72,7 +72,7 @@ echo "   * build status"
 ls -las
 echo "   * git status"
 git status --porcelain
-wc -l
+git status --porcelain | wc -l
 
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 if [ $(git status --porcelain | wc -l) -lt 1 ]; then
