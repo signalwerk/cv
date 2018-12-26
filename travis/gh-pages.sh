@@ -44,27 +44,23 @@ cd $DEPLOY_DIR
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 cd $ROOT_DIR
 
-# Clean out existing contents
+# Clean out existing contents and save git
 echo "   * clean up"
-cd $DEPLOY_DIR
-ls -las
-# Recursively clean current directory but not dir named .git
-rm -r $(ls -a | grep -v '^\.\.$' | grep -v '^\.$' | grep -v '^\.git$')
-
-echo "   * clean up – end"
-ls -las
-
 cd $ROOT_DIR
-
+mkdir __save_git
+mv $DEPLOY_DIR/.git __save_git/
+rm -rf $DEPLOY_DIR
+mkdir -p $DEPLOY_DIR
 
 # Run our compile script
 echo "   * build"
-
-mkdir __save_git
-mv $DEPLOY_DIR/.git __save_git/
 sh ./travis/build.sh
+
+# restore git
+cd $ROOT_DIR
 mv __save_git/.git $DEPLOY_DIR/
 rm -rf __save_git
+
 
 # Now let's go have some fun with the cloned repo
 cd $DEPLOY_DIR
@@ -72,12 +68,6 @@ echo "   * build info"
 
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
-
-echo "   * build status"
-ls -las
-echo "   * git status"
-git status --porcelain
-git status --porcelain | wc -l
 
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 if [ $(git status --porcelain | wc -l) -lt 1 ]; then
