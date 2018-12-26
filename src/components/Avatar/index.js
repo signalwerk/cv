@@ -14,9 +14,7 @@ const Avatar = ({ children }) => (
         </div>
       </ListCol>
       <ListCol column={1}>
-        <div className="avatar--60p">
-          <img className="avatar--img" src={StefanHuber} alt="Stefan Huber" />
-        </div>
+        <img className="avatar--img" src={StefanHuber} alt="Stefan Huber" />
       </ListCol>
     </ListItem>
   </div>

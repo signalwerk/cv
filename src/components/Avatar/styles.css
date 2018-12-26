@@ -8,15 +8,6 @@
   display: block;
 }
 
-.avatar--60p {
-  width: 100%;
-}
-@media screen and (min-width: 39rem) {
-  .avatar--60p {
-    width: 60%;
-  }
-}
-
 .avatar--round {
   border-radius: 50%;
   width: 40%;
