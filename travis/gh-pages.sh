@@ -49,8 +49,11 @@ ls -las
 # Clean out existing contents
 echo "   * clean up"
 cd $DEPLOY_DIR
+ls -las
 # Recursively clean current directory but not dir named .git
 find . -maxdepth 1 -mindepth 1 -not -name .git -exec rm -rf {} \;
+echo "   * clean up done"
+ls -las
 cd $ROOT_DIR
 ls -las
 
