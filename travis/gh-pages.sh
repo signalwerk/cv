@@ -48,7 +48,7 @@ cd $ROOT_DIR
 echo "   * clean up"
 cd $DEPLOY_DIR
 # Recursively clean current directory but not dir named .git
-find . -maxdepth 1 -mindepth 1 -not -name .git -exec rm -rf {} \;
+ rm -r $(ls -a | grep -v '^\.\.$' | grep -v '^\.$' | grep -v '^\.git$')	
 cd $ROOT_DIR
 
 
