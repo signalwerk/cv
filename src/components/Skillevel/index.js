@@ -7,7 +7,7 @@ const Skillevel = ({ score, name }) => (
     <span className="list--col_0">{name}</span>
 
     <span className="list--col_1">
-      <div style={{ marginTop: "0.4rem", height: "0.7rem", width: "100%", backgroundColor: "#ddd" }}>
+      <div style={{ marginTop: "0.4rem", height: "0.5rem", width: "100%", backgroundColor: "#ddd" }}>
         <div style={{ height: "100%", width: `${score}%`, backgroundColor: "#004b5f" }} />
       </div>
     </span>
