@@ -59,7 +59,12 @@ cd $ROOT_DIR
 
 # Run our compile script
 echo "   * build"
+
+mkdir __save_git
+mv $DEPLOY_DIR/.git __save_git/
 sh ./travis/build.sh
+mv __save_git/.git $DEPLOY_DIR/
+rm -rf __save_git
 
 # Now let's go have some fun with the cloned repo
 cd $DEPLOY_DIR
