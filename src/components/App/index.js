@@ -26,7 +26,6 @@ const version = new Date(
 ).toLocaleDateString("en-US", options);
 
 
-
 class App extends Component {
   render() {
     return (

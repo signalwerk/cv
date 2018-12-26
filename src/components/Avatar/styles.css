@@ -8,8 +8,7 @@
   display: block;
 }
 
-.avatar--round {
-  border-radius: 50%;
+.avatar--icon {
   width: 40%;
-  overflow: hidden;
+  height: auto;
 }

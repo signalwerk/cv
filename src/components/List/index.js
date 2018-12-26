@@ -25,17 +25,22 @@ export const ListCol = ({ column, children }) => (
 const List = ({ children }) => {
   return (
     <ListRoot>
-      {children.split("\n* ").splice(1).map(line => (
-        <ListItem>
-          {line.split("|").map((item, index) => {
-            return (
-              <ListCol column={index}>
-                <Mark options={options}>{item}</Mark>
-              </ListCol>
-            );
-          })}
-        </ListItem>
-      ))}
+      {children
+        .split("\n* ")
+        .splice(1)
+        .map(line => (
+          <ListItem>
+            {line.split("|").map((item, index) => {
+              return (
+                <ListCol column={index}>
+                  <div className={`list--col_${index}--inner`}>
+                    <Mark options={options}>{item}</Mark>
+                  </div>
+                </ListCol>
+              );
+            })}
+          </ListItem>
+        ))}
     </ListRoot>
   );
 };

@@ -4,7 +4,9 @@ import "./styles.css";
 
 const Skillevel = ({ score, name }) => (
   <ListItem>
-    <ListCol column={0}>{name}</ListCol>
+    <ListCol column={0}>
+      <div className="list--col_0--inner">{name}</div>
+    </ListCol>
 
     <ListCol column={1}>
       <div
