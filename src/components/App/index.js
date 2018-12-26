@@ -25,7 +25,6 @@ const version = new Date(
   process.env.REACT_APP_BUILD_TIME * 1000
 ).toLocaleDateString("en-US", options);
 
-
 class App extends Component {
   render() {
     return (
