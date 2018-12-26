@@ -43,35 +43,22 @@ git clone $REPO $DEPLOY_DIR
 cd $DEPLOY_DIR
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 cd $ROOT_DIR
-ls -las
-
 
 # Clean out existing contents
 echo "   * clean up"
 cd $DEPLOY_DIR
-ls -las
 # Recursively clean current directory but not dir named .git
-#find . -maxdepth 1 -mindepth 1 -not -name .git -exec rm -rf {} \;
-rm -r $(ls -a | grep -v '^\.\.$' | grep -v '^\.$' | grep -v '^\.git$')
-echo "   * clean up done"
-ls -las
+find . -maxdepth 1 -mindepth 1 -not -name .git -exec rm -rf {} \;
 cd $ROOT_DIR
-ls -las
 
 
 # Run our compile script
 echo "   * build"
 sh ./travis/build.sh
-ls -las
 
 # Now let's go have some fun with the cloned repo
 cd $DEPLOY_DIR
 echo "   * build info"
-ls -las
-echo "   * git status"
-git status --porcelain
-git status --porcelain | wc -l
-echo "   * git status status"
 
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
