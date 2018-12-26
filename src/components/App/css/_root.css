@@ -24,6 +24,7 @@ body {
 }
 
 ::selection {
-  background: #e02fb4;
+  background: #004b5f;
+  color: white;
   text-shadow: none;
 }

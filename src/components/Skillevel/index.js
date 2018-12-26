@@ -1,17 +1,30 @@
 import React from "react";
+import { ListItem, ListCol } from "../List";
 import "./styles.css";
 
 const Skillevel = ({ score, name }) => (
-  <div className="list--li">
+  <ListItem>
+    <ListCol column={0}>{name}</ListCol>
 
-    <span className="list--col_0">{name}</span>
-
-    <span className="list--col_1">
-      <div style={{ marginTop: "0.4rem", height: "0.5rem", width: "100%", backgroundColor: "#ddd" }}>
-        <div style={{ height: "100%", width: `${score}%`, backgroundColor: "#004b5f" }} />
+    <ListCol column={1}>
+      <div
+        style={{
+          marginTop: "0.4rem",
+          height: "0.5rem",
+          width: "100%",
+          backgroundColor: "#ddd"
+        }}
+      >
+        <div
+          style={{
+            height: "100%",
+            width: `${score}%`,
+            backgroundColor: "#004b5f"
+          }}
+        />
       </div>
-    </span>
-  </div>
+    </ListCol>
+  </ListItem>
 );
 
 export default Skillevel;
