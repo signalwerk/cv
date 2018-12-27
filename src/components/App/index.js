@@ -2,6 +2,7 @@ import React, { lazy, Component, Suspense } from "react";
 import { importMDX } from "mdx.macro";
 import Container from "../Container";
 
+import "./css/fonts.css";
 import "./css/_root.css";
 import "./css/a.css";
 import "./css/code.css";
