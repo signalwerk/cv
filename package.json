@@ -12,6 +12,7 @@
   "scripts": {
     "start": "REACT_APP_BUILD_TIME=$(date +%s) react-scripts start",
     "build": "REACT_APP_BUILD_TIME=$(date +%s) react-scripts build && cp readme.md build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
