@@ -2,42 +2,22 @@ import React from "react";
 import { ListRoot, ListItem, ListCol } from "../List";
 import "./styles.css";
 
-//
-// <ListItem>
-//   <ListCol column={0}>
-//     <div className="list--col_0--inner">{name}</div>
-//   </ListCol>
-//
-//   <ListCol column={1}>
-//     <div
-//       style={{
-//         marginTop: "0.4rem",
-//         height: "0.5rem",
-//         width: "100%",
-//         backgroundColor: "#ddd"
-//       }}
-//     >
-//       <div
-//         style={{
-//           height: "100%",
-//           width: `${score}%`,
-//           backgroundColor: "#004b5f"
-//         }}
-//       />
-//     </div>
-//   </ListCol>
-// </ListItem>
-//
-
-const Skillevel = ({ data }) => {
+const Skillevel = ({ data, showHeader }) => {
   return (
     <ListRoot>
-      <ListItem>
-        <div className="skill--basic"><div className="skill--label">Basic</div></div>
-        <div className="skill--pro"><div className="skill--label">Professional</div></div>
-        <div className="skill--advanced"><div className="skill--label">Advanced</div></div>
+      {showHeader && (
+        <ListItem>
+          <div className="skill--basic">
+            <div className="skill--label">Basic</div>
+          </div>
+          <div className="skill--pro">
+            <div className="skill--label">Professional</div>
+          </div>
+          <div className="skill--advanced">
+            <div className="skill--label">Advanced</div>
+          </div>
         </ListItem>
-
+      )}
 
       {data
         .trim()
@@ -48,7 +28,6 @@ const Skillevel = ({ data }) => {
 
           return (
             <ListItem>
-
               <ListCol column={0}>
                 <div className="list--col_0--inner">{parts[1]}</div>
               </ListCol>

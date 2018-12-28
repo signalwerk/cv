@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <Container>
         <h1>Stefan Huber · Curriculum{"\u00A0"}Vitae</h1>
-        <small>Version · {version}</small>
+        <small>Updated · {version}</small>
         <Suspense fallback={<div>Loading – Curriculum Vitae...</div>}>
           <CV />
         </Suspense>
