@@ -10,9 +10,9 @@ const Avatar = ({ children }) => (
     <ListRoot>
       <ListItem>
         <ListCol column={0}>
-          <div className="avatar--icon">
+          <span className="avatar--icon">
             <img className="avatar--img" src={Signalwerk} alt="Stefan Huber" />
-          </div>
+          </span>
         </ListCol>
         <ListCol column={1}>
           <img className="avatar--img" src={StefanHuber} alt="Stefan Huber" />

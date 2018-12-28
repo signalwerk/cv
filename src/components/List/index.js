@@ -35,9 +35,9 @@ const List = ({ data }) => {
             {line.split("|").map((item, index) => {
               return (
                 <ListCol column={index}>
-                  <div className={`list--col_${index}--inner`}>
-                    <Mark options={options}>{item}</Mark>
-                  </div>
+                  <span className={`list--col_${index}--inner`}>
+                    <Mark wrap="span" options={options}>{item}</Mark>
+                  </span>
                 </ListCol>
               );
             })}

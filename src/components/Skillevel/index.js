@@ -7,15 +7,15 @@ const Skillevel = ({ data, showHeader }) => {
     <ListRoot>
       {showHeader && (
         <ListItem>
-          <div className="skill--basic">
-            <div className="skill--label">Basic</div>
-          </div>
-          <div className="skill--pro">
-            <div className="skill--label">Professional</div>
-          </div>
-          <div className="skill--advanced">
-            <div className="skill--label">Advanced</div>
-          </div>
+          <span className="skill--basic">
+            <span className="skill--label">Basic</span>
+          </span>
+          <span className="skill--pro">
+            <span className="skill--label">Professional</span>
+          </span>
+          <span className="skill--advanced">
+            <span className="skill--label">Advanced</span>
+          </span>
         </ListItem>
       )}
 
@@ -29,28 +29,30 @@ const Skillevel = ({ data, showHeader }) => {
           return (
             <ListItem>
               <ListCol column={0}>
-                <div className="list--col_0--inner">{parts[1]}</div>
+                <span className="list--col_0--inner">{parts[1]}</span>
               </ListCol>
 
               <ListCol column={1}>
-                <div className="list--col_1--inner">
-                  <div
+                <span className="list--col_1--inner">
+                  <span
                     style={{
                       marginTop: "0.4rem",
                       height: "0.5rem",
                       width: "100%",
-                      backgroundColor: "#ddd"
+                      backgroundColor: "#ddd",
+                      display: 'block'
                     }}
                   >
-                    <div
+                    <span
                       style={{
                         height: "100%",
                         width: `${parseInt(parts[0])}%`,
-                        backgroundColor: "#004b5f"
+                        backgroundColor: "#004b5f",
+                        display: 'block'
                       }}
                     />
-                  </div>
-                </div>
+                </span>
+                </span>
               </ListCol>
             </ListItem>
           );

@@ -1,6 +1,7 @@
 .skill--basic,
 .skill--pro,
 .skill--advanced {
+  display: block;
   position: relative;
   height: 0;
 
@@ -50,6 +51,7 @@
 }
 
 .skill--label {
+  display: block;
   position: absolute;
   width: 100%;
   margin-top: -0.9rem;
