@@ -28,3 +28,16 @@ body {
   color: white;
   text-shadow: none;
 }
+
+@media print {
+  html {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    font-size: 10pt;
+  }
+
+  @page {
+    size: A4;
+    margin: 12mm 15mm 20mm 35mm;
+  }
+}

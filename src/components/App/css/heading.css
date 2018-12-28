@@ -8,6 +8,27 @@ h4 {
   margin-top: 1rem;
   margin-bottom: 0;
 }
+
+@media print {
+  h1,
+  h2,
+  h3,
+  h4 {
+    page-break-before: avoid;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  /* h3 {
+    page-break-inside: avoid;
+}
+h3::after {
+    content: "";
+    display: block;
+    height: 100px;
+    margin-bottom: -100px;
+} */
+}
+
 h1,
 h3 {
   letter-spacing: 0.1em;

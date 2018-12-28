@@ -5,3 +5,9 @@ a {
 a:hover {
   color: inherit;
 }
+
+@media print {
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+  }
+}
