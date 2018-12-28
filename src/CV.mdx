@@ -7,7 +7,7 @@ import Avatar from '../../../src/components/Avatar';
 
 
 
-<List>{`
+<List data={`
 * Name                   |     Stefan Huber
 * Mail                   |     sh@signalwerk.ch
 * Mobile                 |     +41 78 744 37 38
@@ -18,26 +18,26 @@ import Avatar from '../../../src/components/Avatar';
 * Marital status         |     Single
 * Erdös number           |     ∞
 * Cyborg extensions      |     Glasses
-`}</List>
+`} />
 
 <hr />
 <Avatar />
 
 ## *Professional Experience*
-<List>{`
+<List data={`
 * 2006 – now          | *Developer* ~· Self Employed · Zurich~
 * 2007 – 2008         | *Assistant* ~· Zurich University of the Arts (ZHdK) · Department of Design~
 * 2003 – 2005         | *Typesetter & Head of Information Technology* ~· Team hp Schneider · Winterthur~
 * 2002                | *Typesetter & Graphic Designer* ~· ropress · Zurich~
 * 2001 – 2002         | *Typesetter & Graphic Designer* ~· gdz AG · Zurich~
-`}</List>
+`} />
 
 ## *Degree*
-<List>{`
+<List data={`
 * 2006 – 2008         | *CAS Type Design* ~· Zurich University of the Arts (ZHdK) · Department of Design~
 * 2002 – 2004         | *Typographic Designer* ~· School of Design (SfGZ) · Zurich~
 * 1997 – 2001         | *Polygraf* ~· School of Design (SfGZ) · Zurich~
-`}</List>
+`} />
 
 
 ## *Open Source Contributions*
@@ -49,112 +49,119 @@ import Avatar from '../../../src/components/Avatar';
 
 ## Skill Set
 ### Programming Languages
-<Skillevel score={95} name="JavaScript" />
-<Skillevel score={65} name="Python" />
-<Skillevel score={60} name="PHP" />
-<Skillevel score={45} name="C & C++" />
-<Skillevel score={40} name="Java" />
-<Skillevel score={20} name="Ruby" />
-<Skillevel score={70} name="XSLT" />
-<Skillevel score={40} name="Shell Script" />
+<Skillevel data={`
+* 95       |   JavaScript
+* 65       |   Python
+* 60       |   PHP
+* 45       |   C & C++
+* 40       |   Java
+* 20       |   Ruby
+* 70       |   XSLT
+* 40       |   Shell Script`} />
 
 ### Frameworks
-<Skillevel score={90} name="react.js" />
-<Skillevel score={70} name="express.js" />
-<Skillevel score={50} name="ember.js" />
-<Skillevel score={40} name="backbone.js" />
-<Skillevel score={85} name="jQuery" />
-<Skillevel score={60} name="processing.org" />
-<Skillevel score={55} name="Paper.js" />
+<Skillevel data={`
+* 90       |   react.js
+* 70       |   express.js
+* 50       |   ember.js
+* 40       |   backbone.js
+* 85       |   jQuery
+* 60       |   processing.org
+* 55       |   Paper.js`} />
 
 ### CSS Processors
-<Skillevel score={80} name="PostCSS" />
-<Skillevel score={90} name="SCSS" />
-<Skillevel score={70} name="LESS" />
+<Skillevel data={`
+* 80       |   PostCSS
+* 90       |   SCSS
+* 70       |   LESS`} />
 
 ### Packaging
-<Skillevel score={70} name="webpack" />
-<Skillevel score={60} name="gulp" />
+<Skillevel data={`
+* 70       |   webpack
+* 60       |   gulp`} />
 
 ### Database
-<Skillevel score={80} name="Relational database (SQL)" />
-<Skillevel score={65} name="Document-oriented database" />
+<Skillevel data={`
+* 80       |   Relational database (SQL)
+* 65       |   Document-oriented database`} />
 
 ### Good to know
-<Skillevel score={85} name="GIT/gitflow" />
-<Skillevel score={90} name="RegEx" />
-<Skillevel score={40} name="Linux/BSD Admin" />
+<Skillevel data={`
+* 85       |   GIT/gitflow
+* 90       |   RegEx
+* 40       |   Linux/BSD Admin`} />
 
 ### Working with Designers
-<Skillevel score={65} name="Sketch" />
-<Skillevel score={35} name="Adobe XD" />
-<Skillevel score={80} name="Adobe Photoshop" />
-<Skillevel score={90} name="Adobe InDesign" />
-<Skillevel score={85} name="Adobe Illustrator" />
+<Skillevel data={`
+* 65       |   Sketch
+* 35       |   Adobe XD
+* 80       |   Adobe Photoshop
+* 90       |   Adobe InDesign
+* 85       |   Adobe Illustrator`} />
 
 
 ## Experience
 
 ### Paradigm & Platform
-<List>{`
+<List data={`
 * 1998 – now         | Procedural programming
 * 2000 – now         | Declarative programming
 * 2005 – now         | Object-oriented programming (OOP)
 * 2010 – now         | Hardware programming (Microcontroller)
-`}</List>
+`} />
 
 
 ### Frameworks & Datafetching
-<List>{`
+<List data={`
 * 2016 – now           | GraphQL
 * 2015 – now           | react.js
 * 2011 – 2014          | ember.js
 * 2010 – now           | RESTful
-`}</List>
+`} />
 
 
 ### Database
-<List>{`
+<List data={`
 * 2012 – now         | Document-oriented databases
 * 2006 – 2010        | Relational Databases (SQL)
-`}</List>
+`} />
 
 
 ### Version Control
-<List>{`
+<List data={`
 * 2010 – now         | GIT
 * 2006 – 2010        | SVN
-`}</List>
+`} />
 
 
 ## *Languages*
-<List>{`
+<List data={`
 * German	| Native
 * English	| Fluent ~· CEFR C2~
 * French	| Intermediate ~· CEFR B1~
 * Spanish	| Basic ~· CEFR A2~
-`}</List>
+`} />
 
 
 ## *Language Certificates*
-<List>{`
+<List data={`
 * 2008 	| Cambridge Certificate of Advanced English ~· CAE~
 * 2006	| Cambridge First Certificate in English ~· FCE~
-`}</List>
+`} />
 
 
 ## *Teaching*
-<List>{`
+<List data={`
 * 2017 – now          | *Web-Technology for Interaction Designer* ~· School of Design (SfGZ) · Zurich~
 * 2014 – 2015         | *Web-Technology for Designer* ~· School of Design (SfGZ) · Zurich~
 * 2008                | *Technical Training for Designer* ~· University of Applied Sciences and Arts · Lucerne~
 * 2007 – 2008         | *Technical Training for Typesetter* ~· School of Design (SfGZ) · Zurich~
 * 2005 – 2006         | *Technical Training for Graphic Designer* ~· School of Design (SfGZ) · Zurich~
-`}</List>
+`} />
 
 
 ## *Talks*
-<List>{`
+<List data={`
 * 2018                | *Git & Github*  ~· Meetup · Zurich~
 * 2018                | *React.js*  ~· Meetup · Zurich~
 * 2018                | *ramdajs*  ~· Meetup · Zurich~
@@ -166,61 +173,61 @@ import Avatar from '../../../src/components/Avatar';
 * 2014                | *Responsive design – who adapts to whom?*  ~· Meeting Point Publishing · Zurich~
 * 2011                | *Caminantes Grafico* ~· Hyperwerk Institute of Postindustrial Design · Basel~
 * 2010                | *New Fonts! Only why?* ~· Day of Font · Zurich~
-`}</List>
+`} />
 
 
 ## *Volunteer*
-<List>{`
+<List data={`
 * 2018 – now          | *Teller* elected by city council ~· Zurich~
 * 2013 – now          | *Auditor* · FabLab ~· Zurich~
 * 2013 – 2015         | *Board member* · Verein für die Schwarze Kunst e.V. ~· Dresden, Germany~
 * 2008 – 2013         | *Board assistant* · Grafisches Forum Zürich ~· Zurich~
 * 1999 – 2008         | *Board member* · Youth Commission comedia ~· Switzerland~
-`}</List>
+`} />
 
 
 ## *Social service <small>· mandatory in Switzerland</small>*
 
-<List>{`
+<List data={`
 * 2010 · 2 Month                | *Community worker* ~· Christuszentrum · Zurich~
 * 2009 · 3 Month                | *Community worker* ~· Christuszentrum · Zurich~
 * 2008 · 3 Month                | *Driver for disabled and elderly people* ~· TIXI · Zurich~
 * 2002 · 4 Month                | *Archivist* ~· Swiss National Museum Zurich, Graphic Collection~
-`}</List>
+`} />
 
 ## *Internship*
-<List>{`
+<List data={`
 * 2009 · 6 Month         | Typesetting with movable types at «Offizin Haag Drugulin» in Leipzig
-`}</List>
+`} />
 
 ## *Stays abroad*
-<List>{`
+<List data={`
 * 2012 · 4 Month     | *Sabbatical* ~· New York~
 * 2011 · 3 Month     | *Sabbatical* ~· Various places, USA~
 * 2008 · 3 Month     | *English School* ~· Sydney~
 * 2006 · 3 Month     | *English School* ~· London~
 * 2006 · 2 Month     | *Spanish School* ~· Valencia, Spain~
-`}</List>
+`} />
 
 ## *Sport*
-<List>{`
+<List data={`
 * 2010 – now	| 5 – 7 km swimming per week
 * 1990 – 2000	| Judo
-`}</List>
+`} />
 
 ## *Other Certificates*
-<List>{`
+<List data={`
 * Driving License | Swiss driving licenses A1, B, D1 (3,5t;106), BE, D1E
 * Publishing      | PDFX-ready Creator Certified Expert ~· 2005~
-`}</List>
+`} />
 
 
 
 ## *Personal Internet History *
-<List>{`
+<List data={`
 * 1996        	| Mail-Address
 * 1999 	        | ebay-Account
 * 2008 	        | Editor-Status for de.wikipedia.org
 * 2011          | Twitter-Account
 * 2011	        | github-Account
-`}</List>
+`} />

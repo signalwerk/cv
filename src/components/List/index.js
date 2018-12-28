@@ -22,12 +22,14 @@ export const ListCol = ({ column, children }) => (
   <span className={`list--col_${column}`}>{children}</span>
 );
 
-const List = ({ children }) => {
+const List = ({ data }) => {
   return (
     <ListRoot>
-      {children
-        .split("\n* ")
-        .splice(1)
+      {data
+        .trim()
+        .split("\n")
+
+        .map(item => item.replace(/^\*[ ]*/, ""))
         .map(line => (
           <ListItem>
             {line.split("|").map((item, index) => {
