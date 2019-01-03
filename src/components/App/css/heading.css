@@ -4,7 +4,6 @@ h3,
 h4 {
   color: #002f58;
   font-weight: 700;
-
   margin-top: 1rem;
   margin-bottom: 0;
 }
@@ -36,23 +35,32 @@ h1 {
   font-size: 1.2rem;
   margin-bottom: 4rem;
   color: #004b5f;
+  margin-top: 0;
 }
+
 h2 {
   font-size: 1rem;
-  margin-bottom: 2.3rem;
   margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
-h2 em {
-  display: block;
+@media print {
+  h2 {
+    position: static;
+  }
+}
 
+h2 small {
   color: #002f58;
-
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
 }
+
 h3 {
-  /* margin-left: calc(((100% - (11 * 3%)) / 12) * 3 + 3% * 3); */
   font-size: 0.8rem;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
