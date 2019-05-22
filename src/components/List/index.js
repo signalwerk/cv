@@ -28,7 +28,7 @@ const List = ({ data }) => {
       {data
         .trim()
         .split("\n")
-
+        // remove asterisk (*) at the beginning of the line
         .map(item => item.replace(/^\*[ ]*/, ""))
         .map(line => (
           <ListItem>
@@ -36,7 +36,9 @@ const List = ({ data }) => {
               return (
                 <ListCol column={index}>
                   <span className={`list--col_${index}--inner`}>
-                    <Mark wrap="span" options={options}>{item}</Mark>
+                    <Mark wrap="span" options={options}>
+                      {item}
+                    </Mark>
                   </span>
                 </ListCol>
               );

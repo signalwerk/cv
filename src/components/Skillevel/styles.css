@@ -56,3 +56,7 @@
   width: 100%;
   margin-top: -0.9rem;
 }
+
+.list--col_1--level {
+  transition: width 350ms;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { ListRoot, ListItem, ListCol } from "../List";
+import TrackVisibility from "react-on-screen";
 import "./styles.css";
 
 const Skillevel = ({ data, showHeader }) => {
@@ -33,26 +34,31 @@ const Skillevel = ({ data, showHeader }) => {
               </ListCol>
 
               <ListCol column={1}>
-                <span className="list--col_1--inner">
-                  <span
+                <div className="list--col_1--inner">
+                  <div
                     style={{
                       marginTop: "0.4rem",
                       height: "0.5rem",
                       width: "100%",
                       backgroundColor: "#ddd",
-                      display: 'block'
+                      display: "block"
                     }}
                   >
-                    <span
-                      style={{
-                        height: "100%",
-                        width: `${parseInt(parts[0])}%`,
-                        backgroundColor: "#004b5f",
-                        display: 'block'
-                      }}
-                    />
-                </span>
-                </span>
+                    <TrackVisibility once={true}>
+                      {({ isVisible }) => (
+                        <div
+                          className="list--col_1--level"
+                          style={{
+                            height: "0.5rem",
+                            width: `${isVisible ? parseInt(parts[0]) : 0}%`,
+                            backgroundColor: "#004b5f",
+                            display: "block"
+                          }}
+                        />
+                      )}
+                    </TrackVisibility>
+                  </div>
+                </div>
               </ListCol>
             </ListItem>
           );
