@@ -24,11 +24,11 @@ const Skillevel = ({ data, showHeader }) => {
         .trim()
         .split("\n")
         .map(item => item.replace(/^\*[ ]*/, ""))
-        .map(line => {
+        .map((line, indexLine) => {
           let parts = line.split("|");
 
           return (
-            <ListItem>
+            <ListItem key={indexLine}>
               <ListCol column={0}>
                 <span className="list--col_0--inner">{parts[1]}</span>
               </ListCol>
