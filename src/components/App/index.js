@@ -1,6 +1,7 @@
 import React, { lazy, Component, Suspense } from "react";
 import { importMDX } from "mdx.macro";
 import Container from "../Container";
+import Details from "../Details";
 
 import "./css/fonts.css";
 import "./css/_root.css";
@@ -26,10 +27,31 @@ const version = new Date(
   process.env.REACT_APP_BUILD_TIME * 1000
 ).toLocaleDateString("en-US", options);
 
+// Copied from http:jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
+const getUrlVars = () => {
+  var vars = [],
+    hash;
+  var hashes = window.location.href
+    .slice(window.location.href.indexOf("?") + 1)
+    .split("&");
+  for (var i = 0; i < hashes.length; i++) {
+    hash = hashes[i].split("=");
+    vars.push(hash[0]);
+    vars[hash[0]] = hash[1];
+  }
+  return vars;
+};
+const urlParams = getUrlVars();
+
 class App extends Component {
   render() {
     return (
       <Container>
+        {urlParams["details"] && (
+          <Suspense fallback={<div>Loading – Details...</div>}>
+            <Details />
+          </Suspense>
+        )}
         <h1>Stefan Huber · Curriculum{"\u00A0"}Vitae</h1>
         <small>Updated · {version}</small>
         <Suspense fallback={<div>Loading – Curriculum Vitae...</div>}>
