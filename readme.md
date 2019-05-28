@@ -1,4 +1,6 @@
 # Stefan Huber · Curriculum Vitae
+[![Build Status](https://travis-ci.org/signalwerk/signalwerk.github.io.svg?branch=master)](https://travis-ci.org/signalwerk/signalwerk.github.io)
+
 Curriculum Vitae of [→ Stefan Huber](https://signalwerk.github.io). To see the source code see [build branch](https://github.com/signalwerk/signalwerk.github.io/tree/build).
 
 ### Thanks
