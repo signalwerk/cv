@@ -9,8 +9,8 @@ env:
   - ENCRYPTION_LABEL: "e0d4f9e6d576"
   - COMMIT_AUTHOR_EMAIL: "sh@signalwerk.ch"
   - DEPLOY_DIR: "build"
-  - SOURCE_BRANCH: "build"
-  - TARGET_BRANCH: "master"
+  - SOURCE_BRANCH: "master"
+  - TARGET_BRANCH: "gh-pages"
 branches:
   only:
-  - build
+  - master
