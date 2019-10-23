@@ -1,7 +1,7 @@
 # Stefan Huber · Curriculum Vitae
-[![Build Status](https://travis-ci.org/signalwerk/signalwerk.github.io.svg?branch=build)](https://travis-ci.org/signalwerk/signalwerk.github.io)
+[![Build Status](https://travis-ci.org/signalwerk/cv.svg?branch=master)](https://travis-ci.org/signalwerk/cv)
 
-Curriculum Vitae of [→ Stefan Huber](https://signalwerk.github.io). To see the source code see [build branch](https://github.com/signalwerk/signalwerk.github.io/tree/build).
+Curriculum Vitae of [→ Stefan Huber](https://cv.signalwerk.ch). Source code on [GitHub repository](https://github.com/signalwerk/cv).
 
 ### Thanks
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
