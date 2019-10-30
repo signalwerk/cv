@@ -3,14 +3,11 @@ node_js: stable
 install:
   - npm ci
 script:
-  - bash ./travis/gh-pages.sh
+  - bash ./ci/gh-pages.sh
 env:
   global:
-  - ENCRYPTION_LABEL: "e0d4f9e6d576"
   - COMMIT_AUTHOR_EMAIL: "sh@signalwerk.ch"
   - DEPLOY_DIR: "build"
-  - SOURCE_BRANCH: "master"
-  - TARGET_BRANCH: "gh-pages"
 branches:
   only:
   - master

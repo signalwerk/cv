@@ -2,5 +2,6 @@
 /node_modules
 
 # production
-travis/.ssh/id_rsa
 /build
+ci/.ssh/id_rsa
+ci/.ssh/secret.key
