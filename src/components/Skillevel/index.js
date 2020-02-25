@@ -3,23 +3,9 @@ import { ListRoot, ListItem, ListCol } from "../List";
 import TrackVisibility from "react-on-screen";
 import "./styles.css";
 
-const Skillevel = ({ data, showHeader }) => {
+const Skillevel = ({ data }) => {
   return (
     <ListRoot>
-      {showHeader && (
-        <ListItem className="skills">
-          <span className="skill--basic">
-            <span className="skill--label">Basic</span>
-          </span>
-          <span className="skill--pro">
-            <span className="skill--label">Professional</span>
-          </span>
-          <span className="skill--advanced">
-            <span className="skill--label">Advanced</span>
-          </span>
-        </ListItem>
-      )}
-
       {data
         .trim()
         .split("\n")

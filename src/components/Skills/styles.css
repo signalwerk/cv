@@ -1,0 +1,77 @@
+.skills {
+  position: sticky;
+  top: 3rem;
+  background-color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.45rem;
+}
+
+@media print {
+  .skills {
+    position: relative;
+    top: 0;
+  }
+}
+
+.skills + li {
+  margin-top: -0.45rem;
+}
+
+.skills--basic,
+.skills--pro,
+.skills--advanced {
+  display: block;
+  position: relative;
+  height: 0;
+
+  grid-column-start: 5;
+  grid-column-end: 13;
+  font-size: 0.7rem;
+}
+
+@media screen and (min-width: 630px) {
+  .skills--basic,
+  .skills--pro,
+  .skills--advanced {
+    grid-column-start: 4;
+  }
+}
+
+.skills--basic::after,
+.skills--pro::after,
+.skills--advanced::after {
+  content: "";
+  width: 1px;
+  height: 0.9rem;
+  background-color: #004b5f;
+  display: block;
+  margin-top: 0.45rem;
+}
+
+.skills--basic::after {
+}
+.skills--pro::after {
+  margin-left: calc(50% - 0.5px);
+}
+.skills--advanced::after {
+  margin-left: calc(100% - 0.5px);
+}
+
+.skills--basic {
+  margin-top: 0.6rem;
+}
+
+.skills--pro {
+  text-align: center;
+}
+
+.skills--advanced {
+  text-align: right;
+}
+
+.skills--label {
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin-top: -0.9rem;
+}

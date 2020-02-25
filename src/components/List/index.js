@@ -8,8 +8,8 @@ const options = {
   "~": { renderer: ({ children }) => <span className="small">{children}</span> }
 };
 
-export const ListRoot = ({ children }) => (
-  <div className="list">
+export const ListRoot = ({ className, children }) => (
+  <div className={`list${className ? ` ${className}` : ""}`}>
     <ul>{children}</ul>
   </div>
 );
