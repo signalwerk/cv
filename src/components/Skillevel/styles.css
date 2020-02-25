@@ -1,3 +1,14 @@
+.skills {
+  position: sticky;
+  top: 3rem;
+  background-color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.45rem;
+}
+.skills + li {
+  margin-top: -0.45rem;
+}
+
 .skill--basic,
 .skill--pro,
 .skill--advanced {
@@ -10,7 +21,7 @@
   font-size: 0.7rem;
 }
 
-@media screen and (min-width: 39rem) {
+@media screen and (min-width: 630px) {
   .skill--basic,
   .skill--pro,
   .skill--advanced {
@@ -32,10 +43,10 @@
 .skill--basic::after {
 }
 .skill--pro::after {
-  margin-left: calc(50% - .5px);
+  margin-left: calc(50% - 0.5px);
 }
 .skill--advanced::after {
-  margin-left: calc(100% - .5px);
+  margin-left: calc(100% - 0.5px);
 }
 
 .skill--basic {

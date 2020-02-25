@@ -6,13 +6,13 @@ html {
   color: #222;
 }
 
-@media screen and (min-width: 39rem) {
+@media screen and (min-width: 630px) {
   html {
     font-size: 18px;
   }
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 960px) {
   html {
     font-size: 20px;
   }

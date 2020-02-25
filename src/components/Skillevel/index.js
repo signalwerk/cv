@@ -7,7 +7,7 @@ const Skillevel = ({ data, showHeader }) => {
   return (
     <ListRoot>
       {showHeader && (
-        <ListItem>
+        <ListItem className="skills">
           <span className="skill--basic">
             <span className="skill--label">Basic</span>
           </span>

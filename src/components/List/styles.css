@@ -43,7 +43,7 @@
   grid-column-end: 13;
 }
 
-@media screen and (min-width: 39rem) {
+@media screen and (min-width: 630px) {
   .list--col_0 {
     grid-column-end: 4;
   }

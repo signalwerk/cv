@@ -14,8 +14,8 @@ export const ListRoot = ({ children }) => (
   </div>
 );
 
-export const ListItem = ({ children }) => (
-  <li className="list--li">{children}</li>
+export const ListItem = ({ className, children }) => (
+  <li className={`list--li${className ? ` ${className}` : ""}`}>{children}</li>
 );
 
 export const ListCol = ({ column, children }) => (
