@@ -1,5 +1,5 @@
 import React from "react";
-import { ListRoot, ListItem, ListCol } from "../List";
+import { ListRoot, ListItem } from "../List";
 import "./styles.css";
 
 const Skills = ({ children }) => {
