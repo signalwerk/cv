@@ -28,3 +28,4 @@ DOS-Days
 ***
 * 2017 Gründungsgenossenschafter «Genossenschaft Basel unverpackt»
 * 2015 Mitglied Genossenschaft Kalkbreite
+* 2016 Mitglied Genossenschaft Kraftwerk1
