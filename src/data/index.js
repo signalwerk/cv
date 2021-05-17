@@ -4,11 +4,10 @@ const yaml = require("js-yaml");
 
 //https://gist.github.com/kethinov/6658166
 // List all files in a directory in Node.js recursively in a synchronous fashion
-var walkSync = (dir, filelist) => {
+var walkSync = (dir, filelist = []) => {
   var path = path || require("path");
   var fs = fs || require("fs"),
     files = fs.readdirSync(dir);
-  filelist = filelist || [];
   files.forEach(file => {
     if (fs.statSync(path.join(dir, file)).isDirectory()) {
       filelist = walkSync(path.join(dir, file), filelist);
