@@ -5,3 +5,5 @@
 /build
 ci/.ssh/id_rsa
 ci/.ssh/secret.key
+/github/.env
+/github/node_modules

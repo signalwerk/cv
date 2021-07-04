@@ -15,7 +15,8 @@
     "build": "REACT_APP_BUILD_TIME=$(date +%s) react-scripts build && cp readme.md build",
     "postbuild": "react-snap",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
@@ -24,6 +25,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "js-yaml": "^3.13.1",
     "react-snap": "^1.23.0"
   }
