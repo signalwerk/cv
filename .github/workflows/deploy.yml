@@ -24,7 +24,7 @@ jobs:
         with:
           path: |
             **/node_modules
-          key: ${{ runner.os }}-${{ env.NVMRC }}-${{ hashFiles('**/package-lock.json')
+          key: ${{ runner.os }}-${{ env.NVMRC }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Read .nvmrc
         run: echo NVMRC=`cat .nvmrc` >> $GITHUB_ENV
