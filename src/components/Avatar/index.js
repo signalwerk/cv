@@ -13,7 +13,7 @@ const Avatar = ({ children }) => (
           <span className="avatar--icon">
             <a
               href="https://avatar.signalwerk.ch/"
-              className="avatar--link"
+              className="avatar--link print-no-href"
               target="_blank"
               rel="noopener noreferrer"
             >

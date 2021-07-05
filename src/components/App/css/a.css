@@ -7,7 +7,7 @@ a:hover {
 }
 
 @media print {
-  a[href^="http"]::after {
+  a[href^="http"]:not(.print-no-href)::after {
     content: " (" attr(href) ")";
   }
 }
