@@ -1,14 +1,13 @@
 import React from "react";
 import "./styles.css";
+import Markdown from "../Markdown/";
 
-import Mark from "react-mark-ii";
-
-const options = {
-  "*": { renderer: "strong" },
-  "~": {
-    renderer: ({ children }) => <span className="small">{children}</span>,
-  },
-};
+// const options = {
+//   "*": { renderer: "strong" },
+//   "~": {
+//     renderer: ({ children }) => <span className="small">{children}</span>,
+//   },
+// };
 
 export const ListRoot = ({ className, children }) => (
   <div className={`list${className ? ` ${className}` : ""}`}>
@@ -43,9 +42,7 @@ const List = ({ data }) => {
             {line.split("|").map((item, index) => {
               return (
                 <ListCol column={index} key={index}>
-                  <Mark wrap="span" options={options}>
-                    {item}
-                  </Mark>
+                  <Markdown text={item} />
                 </ListCol>
               );
             })}

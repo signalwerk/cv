@@ -1,5 +1,9 @@
-import React, { lazy, Component, Suspense } from "react";
-import { importMDX } from "mdx.macro";
+import React, { Component, Suspense } from "react";
+
+/* eslint-disable import/no-webpack-loader-syntax */
+import LI from "!babel-loader!@mdx-js/loader!../../LI.mdx";
+import CV from "!babel-loader!@mdx-js/loader!../../CV.mdx";
+
 import Container from "../Container";
 
 import "./css/fonts.css";
@@ -12,9 +16,6 @@ import "./css/list.css";
 import "./css/p.css";
 import "./css/small.css";
 import "./css/hr.css";
-
-const CV = lazy(() => importMDX("../../CV.mdx"));
-const LI = lazy(() => importMDX("../../LI.mdx"));
 
 const options = {
   year: "numeric",
