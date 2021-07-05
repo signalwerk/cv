@@ -9,12 +9,23 @@ const Avatar = ({ children }) => (
   <div className="avatar">
     <ListRoot>
       <ListItem>
-        <ListCol column={0}>
+        <ListCol column={0} noInner={true}>
           <span className="avatar--icon">
-            <img className="avatar--img" src={Signalwerk} alt="Stefan Huber" />
+            <a
+              href="https://avatar.signalwerk.ch/"
+              className="avatar--link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="avatar--img"
+                src={Signalwerk}
+                alt="Stefan Huber"
+              />
+            </a>
           </span>
         </ListCol>
-        <ListCol column={1}>
+        <ListCol column={1} noInner={true}>
           <img className="avatar--img" src={StefanHuber} alt="Stefan Huber" />
         </ListCol>
       </ListItem>

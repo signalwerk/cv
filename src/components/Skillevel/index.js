@@ -9,36 +9,27 @@ const Skillevel = ({ data }) => {
       {data
         .trim()
         .split("\n")
-        .map(item => item.replace(/^\*[ ]*/, ""))
+        .map((item) => item.replace(/^\*[ ]*/, ""))
         .map((line, indexLine) => {
           let parts = line.split("|");
 
           return (
             <ListItem key={indexLine}>
-              <ListCol column={0}>
-                <span className="list--col_0--inner">{parts[1]}</span>
-              </ListCol>
-
+              <ListCol column={0}>{parts[1]}</ListCol>
               <ListCol column={1}>
-                <div className="list--col_1--inner">
+                <div className="skillevel__level">
                   <div
+                    className="skillevel__level-inner"
                     style={{
-                      marginTop: "0.4rem",
-                      height: "0.5rem",
-                      width: "100%",
-                      backgroundColor: "#ddd",
-                      display: "block"
+                      width: `${parseInt(parts[0])}%`,
                     }}
                   >
                     <TrackVisibility once={true}>
                       {({ isVisible }) => (
                         <div
-                          className="list--col_1--level"
+                          className="skillevel__level-fill"
                           style={{
-                            height: "0.5rem",
-                            width: `${isVisible ? parseInt(parts[0]) : 0}%`,
-                            backgroundColor: "#004b5f",
-                            display: "block"
+                            width: `${isVisible ? 100 : 0}%`,
                           }}
                         />
                       )}

@@ -13,3 +13,7 @@
   height: auto;
   display: block;
 }
+
+.avatar--link {
+  display: block;
+}

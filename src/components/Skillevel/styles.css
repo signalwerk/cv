@@ -1,3 +1,22 @@
-.list--col_1--level {
+.skillevel__level {
+  margin-top: 0.4rem;
+  height: 0.5rem;
+  width: 100%;
+  background-color: #ddd;
+  display: block;
+}
+
+.skillevel__level-inner {
+  height: 0.5rem;
+}
+
+.skillevel__level-fill {
   transition: width 350ms;
+  background-color: #004b5f;
+  height: 0.5rem;
+}
+@media print {
+  .skillevel__level-fill {
+    width: 100% !important;
+  }
 }
