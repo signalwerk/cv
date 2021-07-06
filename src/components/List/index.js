@@ -2,13 +2,6 @@ import React from "react";
 import "./styles.css";
 import Markdown from "../Markdown/";
 
-// const options = {
-//   "*": { renderer: "strong" },
-//   "~": {
-//     renderer: ({ children }) => <span className="small">{children}</span>,
-//   },
-// };
-
 export const ListRoot = ({ className, children }) => (
   <div className={`list${className ? ` ${className}` : ""}`}>
     <ul>{children}</ul>
