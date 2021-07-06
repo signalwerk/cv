@@ -23,6 +23,7 @@
     "build": "REACT_APP_BUILD_TIME=$(date +%s) react-scripts build && cp README.md build",
     "postbuild": "react-snap",
     "test": "react-scripts test",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
