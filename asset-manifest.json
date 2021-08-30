@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.3c73dc5f.chunk.css",
-    "main.js": "/static/js/main.5f18752c.chunk.js",
-    "main.js.map": "/static/js/main.5f18752c.chunk.js.map",
+    "main.js": "/static/js/main.407c02da.chunk.js",
+    "main.js.map": "/static/js/main.407c02da.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.288675da.js",
     "runtime-main.js.map": "/static/js/runtime-main.288675da.js.map",
     "static/js/2.33f62440.chunk.js": "/static/js/2.33f62440.chunk.js",
@@ -12,14 +12,12 @@
     "index.html": "/index.html",
     "static/css/main.3c73dc5f.chunk.css.map": "/static/css/main.3c73dc5f.chunk.css.map",
     "static/js/2.33f62440.chunk.js.LICENSE.txt": "/static/js/2.33f62440.chunk.js.LICENSE.txt",
-    "static/media/StefanHuber1673k.efa476b0.jpg": "/static/media/StefanHuber1673k.efa476b0.jpg",
-    "static/media/fonts.css": "/static/media/open-sans-v15-latin-ext_latin-regular.9ffdcf33.woff",
-    "static/media/signalwerk.73d73717.svg": "/static/media/signalwerk.73d73717.svg"
+    "static/media/fonts.css": "/static/media/open-sans-v15-latin-ext_latin-regular.9ffdcf33.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.288675da.js",
     "static/js/2.33f62440.chunk.js",
     "static/css/main.3c73dc5f.chunk.css",
-    "static/js/main.5f18752c.chunk.js"
+    "static/js/main.407c02da.chunk.js"
   ]
 }
