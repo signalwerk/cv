@@ -2,9 +2,6 @@ import React from "react";
 import { ListRoot, ListItem, ListCol } from "../List";
 import "./styles.css";
 
-import StefanHuber from "./img/StefanHuber1673k.jpg";
-import Signalwerk from "./img/signalwerk.svg";
-
 const Avatar = ({ children }) => (
   <div className="avatar">
     <ListRoot>
@@ -19,14 +16,29 @@ const Avatar = ({ children }) => (
             >
               <img
                 className="avatar--img"
-                src={Signalwerk}
+                src="https://avatar.signalwerk.ch/latest/signalwerk.svg"
                 alt="Stefan Huber"
               />
             </a>
           </span>
         </ListCol>
         <ListCol column={1} noInner={true}>
-          <img className="avatar--img" src={StefanHuber} alt="Stefan Huber" />
+          <img
+            className="avatar--img"
+            src="https://portrait.signalwerk.ch/illustration/2020/rgb/w2000/stefan-huber.jpg"
+            alt="Stefan Huber"
+          />
+          <span className="small">
+            Illustration by{" "}
+            <a
+              href="http://www.guedel.biz/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Benjamin Güdel
+            </a>{" "}
+            · 2020
+          </span>
         </ListCol>
       </ListItem>
     </ListRoot>
