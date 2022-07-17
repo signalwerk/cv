@@ -16,6 +16,7 @@ import "./css/list.css";
 import "./css/p.css";
 import "./css/small.css";
 import "./css/hr.css";
+import "./styles.css";
 
 const options = {
   year: "numeric",
@@ -34,10 +35,14 @@ class App extends Component {
         <h1>Stefan Huber · Curriculum{"\u00A0"}Vitae</h1>
         <small>Updated · {version}</small>
         <Suspense fallback={<div>Loading – Curriculum Vitae...</div>}>
-          <CV />
+          <div className="app__part-cv">
+            <CV />
+          </div>
         </Suspense>
         <Suspense fallback={<div>Loading – Letter of Intent...</div>}>
-          <LI />
+          <div className="app__part-li">
+            <LI />
+          </div>
         </Suspense>
       </Container>
     );

@@ -1,42 +1,30 @@
-/* @font-face {
-  font-family: "CV-SH-OpenSans-Filler";
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/open-sans-v15-latin-ext_latin/fontfiller-regular-webfont.woff2")
-      format("woff2"),
-    url("../fonts/open-sans-v15-latin-ext_latin/fontfiller-regular-webfont.woff")
-      format("woff");
-  unicode-range: U+2007, U+00A0, U+2009, U+202f;
-}
-@font-face {
-  font-family: "CV-SH-OpenSans-Filler";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/open-sans-v15-latin-ext_latin/fontfiller-bold-webfont.woff2")
-      format("woff2"),
-    url("../fonts/open-sans-v15-latin-ext_latin/fontfiller-bold-webfont.woff")
-      format("woff");
-  unicode-range: U+2007, U+00A0, U+2009, U+202f;
-} */
-/* open-sans-regular - latin-ext_latin */
-@font-face {
-  font-family: "CV-SH-OpenSans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/open-sans-v15-latin-ext_latin/open-sans-v15-latin-ext_latin-regular.woff2")
-      format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/open-sans-v15-latin-ext_latin/open-sans-v15-latin-ext_latin-regular.woff")
-      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* open-sans-700 - latin-ext_latin */
-@font-face {
-  font-family: "CV-SH-OpenSans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/open-sans-v15-latin-ext_latin/open-sans-v15-latin-ext_latin-700.woff2")
-      format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/open-sans-v15-latin-ext_latin/open-sans-v15-latin-ext_latin-700.woff")
-      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+:root {
+  --open-sans-fea-aalt: "aalt" off;
+  --open-sans-fea-dnom: "dnom" off;
+  --open-sans-fea-frac: "frac" off;
+  --open-sans-fea-liga: "liga" on;
+  --open-sans-fea-lnum: "lnum" off;
+  --open-sans-fea-locl: "locl" on;
+  --open-sans-fea-numr: "numr" off;
+  --open-sans-fea-onum: "onum" on;
+  --open-sans-fea-ordn: "ordn" off;
+  --open-sans-fea-pnum: "pnum" on;
+  --open-sans-fea-salt: "salt" off;
+  --open-sans-fea-ss01: "ss01" off;
+  --open-sans-fea-ss02: "ss02" off;
+  --open-sans-fea-ss03: "ss03" off;
+  --open-sans-fea-subs: "subs" off;
+  --open-sans-fea-sups: "sups" off;
+  --open-sans-fea-tnum: "tnum" off;
+  --open-sans-fea-zero: "zero" off;
+
+  font-feature-settings: var(--open-sans-fea-aalt), var(--open-sans-fea-dnom),
+    var(--open-sans-fea-frac), var(--open-sans-fea-liga),
+    var(--open-sans-fea-lnum), var(--open-sans-fea-locl),
+    var(--open-sans-fea-numr), var(--open-sans-fea-onum),
+    var(--open-sans-fea-ordn), var(--open-sans-fea-pnum),
+    var(--open-sans-fea-salt), var(--open-sans-fea-ss01),
+    var(--open-sans-fea-ss02), var(--open-sans-fea-ss03),
+    var(--open-sans-fea-subs), var(--open-sans-fea-sups),
+    var(--open-sans-fea-tnum), var(--open-sans-fea-zero);
 }
