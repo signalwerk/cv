@@ -4,4 +4,4 @@
 
 Curriculum Vitae of [→ Stefan Huber](https://cv.signalwerk.ch). Source code on [GitHub repository](https://github.com/signalwerk/cv).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://create-react-app.dev/).
