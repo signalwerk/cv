@@ -31,7 +31,7 @@ const Avatar = ({ children }) => (
           <span className="small">
             Illustration by{" "}
             <a
-              href="http://www.guedel.biz/"
+              href="https://www.guedel.biz/"
               target="_blank"
               rel="noopener noreferrer"
             >
