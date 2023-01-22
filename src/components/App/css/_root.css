@@ -31,8 +31,7 @@ body {
 
 @media print {
   html {
-    -webkit-print-color-adjust: exact;
-    color-adjust: exact;
+    print-color-adjust: exact;
     font-size: 10pt;
   }
 
