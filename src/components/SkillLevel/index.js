@@ -3,7 +3,7 @@ import { ListRoot, ListItem, ListCol } from "../List";
 import TrackVisibility from "react-on-screen";
 import "./styles.css";
 
-const Skillevel = ({ data }) => {
+const SkillLevel = ({ data }) => {
   return (
     <ListRoot>
       {data
@@ -44,4 +44,4 @@ const Skillevel = ({ data }) => {
   );
 };
 
-export default Skillevel;
+export default SkillLevel;

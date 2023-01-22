@@ -1,11 +1,11 @@
-import Skillevel from "./components/Skillevel";
-import Skills from "./components/Skills";
-import List from "./components/List";
-import Avatar from "./components/Avatar";
+import AvatarBlock from "./components/Avatar/index.js";
+import ListBlock from "./components/List/index.js";
+import SkillLevel from "./components/SkillLevel/index.js";
+import SkillsBlock from "./components/SkillsBlock/index.js";
 
 ## Personal Details
 
-<List
+<ListBlock
   data={`
 * Name                   |     Stefan Huber
 * Pronoun                |     he/him** (EN)** · er/ihm** (DE)**
@@ -24,11 +24,11 @@ import Avatar from "./components/Avatar";
 
 <hr />
 
-<Avatar />
+<AvatarBlock />
 
 ## Professional Experience
 
-<List
+<ListBlock
   data={`
 * 2019 – now          | *Developer* **· Liip · Zurich – Switzerland**
 * 2006 – now          | *Developer* **· Self Employed · Zurich – Switzerland**
@@ -42,7 +42,7 @@ import Avatar from "./components/Avatar";
 
 ## Teaching
 
-<List
+<ListBlock
   data={`
 * 2022                | *Design Pixelfonts · Workshop* **· Hackerspace Odenwilusenz · Beringen – Switzerland**
 * 2022                | *Lino printing with and without AI · Workshop* **· Hackerspace Odenwilusenz · Beringen – Switzerland**
@@ -57,7 +57,7 @@ import Avatar from "./components/Avatar";
 
 ## Degree
 
-<List
+<ListBlock
   data={`
 * 2006 – 2008         | *CAS Type Design* **· Zurich University of the Arts (ZHdK) · Department of Design · Zurich – Switzerland**
 * 2002 – 2004         | *Typographic Designer* **· School of Design (SfGZ) · Zurich – Switzerland**
@@ -83,12 +83,11 @@ import Avatar from "./components/Avatar";
 
 ## Skill Set
 
-<Skills>
+<SkillsBlock>
 
 ### Programming Languages
 
-<Skillevel
-  showHeader={true}
+<SkillLevel
   data={`
 * 95       |   JavaScript
 * 70       |   TypeScript
@@ -99,7 +98,8 @@ import Avatar from "./components/Avatar";
 * 40       |   Shell/Bash Script
 `}
 />
-<List
+
+<ListBlock
   data={`
 * Used in the past      | Ruby · XSLT
 `}
@@ -107,7 +107,7 @@ import Avatar from "./components/Avatar";
 
 ### Frameworks
 
-<Skillevel
+<SkillLevel
   data={`
 * 90       |   react.js
 * 80       |   vue.js
@@ -115,7 +115,7 @@ import Avatar from "./components/Avatar";
 `}
 />
 
-<List
+<ListBlock
   data={`
 * others                | processing.org · Paper.js
 * Used in the past      | jQuery · backbone.js · ember.js
@@ -124,7 +124,7 @@ import Avatar from "./components/Avatar";
 
 ### Testing
 
-<Skillevel
+<SkillLevel
   data={`
 * 70       |   Jest
 * 60       |   Mocha
@@ -134,7 +134,7 @@ import Avatar from "./components/Avatar";
 
 ### CSS Processors
 
-<Skillevel
+<SkillLevel
   data={`
 * 90       |   PostCSS
 * 85       |   SCSS
@@ -144,13 +144,13 @@ import Avatar from "./components/Avatar";
 
 ### Build & package manager
 
-<Skillevel
+<SkillLevel
   data={`
 * 95       |   npm
 * 85       |   webpack
 `}
 />
-<List
+<ListBlock
   data={`
 * Used in the past      | Grunt · gulp · Bower
 `}
@@ -158,7 +158,7 @@ import Avatar from "./components/Avatar";
 
 ### CI/CD
 
-<Skillevel
+<SkillLevel
   data={`
 * 85       |   Drone CI
 * 80       |   GitHub Actions
@@ -169,7 +169,7 @@ import Avatar from "./components/Avatar";
 
 ### Database
 
-<Skillevel
+<SkillLevel
   data={`
 * 80       |   Relational database (SQL)
 * 65       |   Document-oriented database
@@ -178,7 +178,7 @@ import Avatar from "./components/Avatar";
 
 ### Good to know
 
-<Skillevel
+<SkillLevel
   data={`
 * 85       |   GIT/gitflow
 * 90       |   RegEx
@@ -190,7 +190,7 @@ import Avatar from "./components/Avatar";
 
 ### Working with Designers
 
-<Skillevel
+<SkillLevel
   data={`
 * 50       |   Figma
 * 65       |   Sketch
@@ -203,19 +203,19 @@ import Avatar from "./components/Avatar";
 
 ### Bar charts are not a good idea for skills in a CV
 
-<Skillevel
+<SkillLevel
   data={`
 * 90       |   Yes
 `}
 />
 
-</Skills>
+</SkillsBlock>
 
 ## Experience
 
 ### Paradigm & Platform
 
-<List
+<ListBlock
   data={`
 * 1998 – now         | Procedural programming
 * 2000 – now         | Declarative programming
@@ -227,7 +227,7 @@ import Avatar from "./components/Avatar";
 
 ### Frameworks & Datafetching
 
-<List
+<ListBlock
   data={`
 * 2019 – now           | vue.js
 * 2016 – now           | GraphQL
@@ -239,7 +239,7 @@ import Avatar from "./components/Avatar";
 
 ### Database
 
-<List
+<ListBlock
   data={`
 * 2012 – now         | Document-oriented databases
 * 2006 – 2010        | Relational Databases (SQL)
@@ -248,7 +248,7 @@ import Avatar from "./components/Avatar";
 
 ### Version Control
 
-<List
+<ListBlock
   data={`
 * 2010 – now         | GIT
 * 2006 – 2010        | SVN
@@ -257,7 +257,7 @@ import Avatar from "./components/Avatar";
 
 ## Languages
 
-<List
+<ListBlock
   data={`
 * German     | Native
 * English    | Fluent **· CEFR C2**
@@ -268,7 +268,7 @@ import Avatar from "./components/Avatar";
 
 ## Language Certificates
 
-<List
+<ListBlock
   data={`
 * 2008     | Cambridge Certificate of Advanced English **· CAE**
 * 2006     | Cambridge First Certificate in English **· FCE**
@@ -277,7 +277,7 @@ import Avatar from "./components/Avatar";
 
 ## Talks
 
-<List
+<ListBlock
   data={`
 * 2019                | *Liberate books*  **· Libre Graphics Meeting · Saarbrücken – Germany**
 * 2019                | *State of the Font*  **· School of Design (SfGZ) · Zurich – Switzerland**
@@ -297,7 +297,7 @@ import Avatar from "./components/Avatar";
 
 ## Publications
 
-<List
+<ListBlock
   data={`
 * 2020                | *Flexbox – aligning elements on the web*  **· Publisher 3/2020 · Switzerland**
 * 2020                | *Units of measurement on the web – relative or absolute*  **· Publisher 2/2020 · Switzerland**
@@ -312,7 +312,7 @@ import Avatar from "./components/Avatar";
 
 ## Volunteer
 
-<List
+<ListBlock
   data={`
 * 2018 – now          | *Election worker* · elected by city council **· Zurich**
 * 2013 – 2021         | *Auditor* · FabLab **· Zurich**
@@ -328,7 +328,7 @@ import Avatar from "./components/Avatar";
 
 ## Social service <small>· mandatory in Switzerland</small>
 
-<List
+<ListBlock
   data={`
 * 2010 · 2 Month                | *Community worker* **· socio-therapeutic facility · Zurich – Switzerland**
 * 2009 · 3 Month                | *Community worker* **· socio-therapeutic facility · Zurich – Switzerland**
@@ -339,7 +339,7 @@ import Avatar from "./components/Avatar";
 
 ## Internship
 
-<List
+<ListBlock
   data={`
 * 2009 · 6 Month         | *Typesetting with movable types* **· Offizin Haag Drugulin · Leipzig – Germany**
 `}
@@ -347,7 +347,7 @@ import Avatar from "./components/Avatar";
 
 ## Stays abroad
 
-<List
+<ListBlock
   data={`
 * 2021 · 2 Month     | *Sabbatical* **· Various places – USA · Antwerp – Belgium**
 * 2017 · 1 Month     | *Sabbatical* **· Ljubljana – Slovenia**
@@ -361,7 +361,7 @@ import Avatar from "./components/Avatar";
 
 ## Sport
 
-<List
+<ListBlock
   data={`
 * 2010 – now    | 10 – 12 km swimming per week
 * 1990 – 2000    | Judo
@@ -370,7 +370,7 @@ import Avatar from "./components/Avatar";
 
 ## Other Certificates
 
-<List
+<ListBlock
   data={`
 * Driving License | Swiss driving licenses **· A1, B, D1 (3,5t;106), BE, D1E**
 * Publishing      | PDFX-ready · Creator Certified Expert **· 2005**
@@ -379,7 +379,7 @@ import Avatar from "./components/Avatar";
 
 ## Personal Internet History
 
-<List
+<ListBlock
   data={`
 * ~1997           | Mail-Address
 * 1999            | ebay Account

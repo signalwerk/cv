@@ -1,8 +1,8 @@
 import React, { Component, Suspense } from "react";
 
 /* eslint-disable import/no-webpack-loader-syntax */
-import LI from "!babel-loader!@mdx-js/loader!../../LI.mdx";
-import CV from "!babel-loader!@mdx-js/loader!../../CV.mdx";
+import LetterOfIntent from "../../LetterOfIntent.mdx";
+import CurriculumVitae from "../../CurriculumVitae.mdx";
 
 import Container from "../Container";
 
@@ -36,12 +36,12 @@ class App extends Component {
         <small>Updated · {version}</small>
         <Suspense fallback={<div>Loading – Curriculum Vitae...</div>}>
           <div className="app__part-cv">
-            <CV />
+            <CurriculumVitae />
           </div>
         </Suspense>
         <Suspense fallback={<div>Loading – Letter of Intent...</div>}>
           <div className="app__part-li">
-            <LI />
+            <LetterOfIntent />
           </div>
         </Suspense>
       </Container>
