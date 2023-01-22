@@ -50,6 +50,6 @@
     "@mdx-js/loader": "^2.2.1",
     "babel-loader": "^8.1.0",
     "gh-pages": "^3.2.3",
-    "react-snap": "^1.23.0"
+    "react-snap": "^1.13.1"
   }
 }
