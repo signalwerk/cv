@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
+    "@mdx-js/react": "^2.3.0",
     "@craco/craco": "^7.0.0",
     "@mdx-js/loader": "^2.2.1",
     "babel-loader": "^8.1.0",

@@ -19,6 +19,30 @@ h4 {
   }
 }
 
+/* show a tag if cursor is hovered over h2 for more than 2sec */
+
+:is(h1, h2, h3, h4) a {
+  display: inline-block;
+  margin-left: -0.75em;
+  padding-right: 0.2em;
+  opacity: 0;
+  transition: opacity 0.5s; /* Optional, for smoothness */
+  transition-delay: 1s;
+}
+
+:is(h1, h2, h3, h4):hover a {
+  opacity: 1;
+}
+
+:is(h1, h2, h3, h4) svg {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+}
+:is(h1, h2, h3, h4) svg path {
+  fill: #002f58;
+}
+
 h1,
 h3 {
   letter-spacing: 0.1em;
