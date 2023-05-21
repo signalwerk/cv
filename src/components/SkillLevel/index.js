@@ -17,16 +17,16 @@ const SkillLevel = ({ data }) => {
             <ListItem key={indexLine}>
               <ListCol column={0}>{parts[1]}</ListCol>
               <ListCol column={1}>
-                <div className="skillevel__level">
-                  <div
+                <span className="skillevel__level">
+                  <span
                     className="skillevel__level-inner"
                     style={{
                       width: `${parseInt(parts[0])}%`,
                     }}
                   >
-                    <TrackVisibility once={true}>
+                    <TrackVisibility tag="span" once={true}>
                       {({ isVisible }) => (
-                        <div
+                        <span
                           className="skillevel__level-fill"
                           style={{
                             width: `${isVisible ? 100 : 0}%`,
@@ -34,8 +34,8 @@ const SkillLevel = ({ data }) => {
                         />
                       )}
                     </TrackVisibility>
-                  </div>
-                </div>
+                  </span>
+                </span>
               </ListCol>
             </ListItem>
           );

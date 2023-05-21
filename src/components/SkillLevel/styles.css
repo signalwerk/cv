@@ -8,13 +8,16 @@
 
 .skillevel__level-inner {
   height: 0.5rem;
+  display: block;
 }
 
 .skillevel__level-fill {
   transition: width 350ms;
   background-color: #004b5f;
   height: 0.5rem;
+  display: block;
 }
+
 @media print {
   .skillevel__level-fill {
     width: 100% !important;

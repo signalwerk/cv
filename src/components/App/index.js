@@ -38,7 +38,7 @@ function headingToSlug(heading) {
     newHeading = heading;
   }
 
-  if (Array.isArray(newHeading)) {
+  if (Array.isArray(heading)) {
     newHeading = heading[0];
   }
 
