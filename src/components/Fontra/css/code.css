@@ -1,0 +1,18 @@
+/* thx github */
+pre,
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+}
+code {
+  margin: 0;
+  padding: 0.2em 0.4em;
+}
+pre {
+  padding: 1em;
+  overflow: auto;
+  line-height: 1.45;
+}

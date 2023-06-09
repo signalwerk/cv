@@ -1,0 +1,96 @@
+h1,
+h2,
+h3,
+h4 {
+  color: #002f58;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+@media print {
+  h1,
+  h2,
+  h3,
+  h4 {
+    page-break-before: avoid;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* show a tag if cursor is hovered over h2 for more than 2sec */
+
+:is(h1, h2, h3, h4) a {
+  display: inline-block;
+  margin-left: -0.75em;
+  padding-right: 0.2em;
+  opacity: 0;
+  transition: opacity 0.5s; /* Optional, for smoothness */
+  transition-delay: 1s;
+}
+
+:is(h1, h2, h3, h4):hover a {
+  opacity: 1;
+}
+
+:is(h1, h2, h3, h4) svg {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+}
+:is(h1, h2, h3, h4) svg path {
+  fill: #002f58;
+}
+
+h1,
+h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  border-top: 0.5rem solid #002f58;
+  padding-top: 0.5em;
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  color: #004b5f;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 9;
+}
+
+@media print {
+  h2 {
+    position: static;
+  }
+}
+
+h2 small {
+  color: #002f58;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+h4 {
+  font-size: 1rem;
+}

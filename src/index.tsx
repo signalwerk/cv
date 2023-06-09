@@ -1,6 +1,8 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { hydrate, render } from "react-dom";
 import App from "./components/App/";
+import Fontra from "./components/Fontra/";
 import reportWebVitals from "./reportWebVitals";
 
 const rootElement = document.getElementById("root");
@@ -8,14 +10,24 @@ const rootElement = document.getElementById("root");
 if (rootElement?.hasChildNodes()) {
   hydrate(
     <React.StrictMode>
-      <App />
+      <Router>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/fontra" element={<Fontra />} />
+        </Routes>
+      </Router>
     </React.StrictMode>,
     rootElement
   );
 } else if (rootElement) {
   render(
     <React.StrictMode>
-      <App />
+      <Router>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/fontra" element={<Fontra />} />
+        </Routes>
+      </Router>
     </React.StrictMode>,
     rootElement
   );

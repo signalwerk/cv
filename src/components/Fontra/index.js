@@ -1,8 +1,7 @@
 import React, { Component, Suspense } from "react";
 
 /* eslint-disable import/no-webpack-loader-syntax */
-// import LetterOfIntent from "../../LetterOfIntent.mdx";
-import CurriculumVitae from "../../CurriculumVitae.mdx";
+import LetterOfIntent from "../../LetterOfIntentFontra.mdx";
 import { MDXProvider } from "@mdx-js/react";
 
 import Container from "../Container";
@@ -94,16 +93,11 @@ class App extends Component {
         >
           <h1>Stefan Huber · Curriculum{"\u00A0"}Vitae</h1>
           <small>Updated · {version}</small>
-          <Suspense fallback={<div>Loading – Curriculum Vitae...</div>}>
-            <div className="app__part-cv">
-              <CurriculumVitae />
-            </div>
-          </Suspense>
-          {/* <Suspense fallback={<div>Loading – Letter of Intent...</div>}>
+          <Suspense fallback={<div>Loading – Letter of Intent...</div>}>
             <div className="app__part-li">
               <LetterOfIntent />
             </div>
-          </Suspense> */}
+          </Suspense>
         </MDXProvider>
       </Container>
     );
