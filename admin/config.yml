@@ -56,6 +56,7 @@ collections:
       - label: Exact Start Date
         name: exactStartDate
         default: ""
+        format: DD.MM.YYYY
         date_format: DD.MM.YYYY
         widget: date
         required: false
@@ -69,6 +70,7 @@ collections:
       - label: Exact End Date
         name: exactEndDate
         default: ""
+        format: DD.MM.YYYY
         date_format: DD.MM.YYYY
         widget: date
         required: false
