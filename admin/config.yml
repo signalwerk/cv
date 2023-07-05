@@ -30,7 +30,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     fields:
       - label: Tag Name
-        name: tagName
+        name: name
         widget: string
       - label: Description
         name: description
@@ -80,10 +80,10 @@ collections:
         widget: relation
         collection: tags
         searchFields:
-          - tagName
+          - name
         displayFields:
-          - tagName
-        valueField: tagName
+          - name
+        valueField: name
         multiple: true
         required: false
       - label: Notes
