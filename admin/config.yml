@@ -1,5 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: signalwerk/cv
+  base_url: https://auth.signalwerk.workers.dev
   branch: main
 
 media_folder: "path/to/your/media" # Media files will be stored in the repo under this folder
