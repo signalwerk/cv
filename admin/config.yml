@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-# media_folder: "path/to/your/media" # Media files will be stored in the repo under this folder
+media_folder: "path/to/your/media" # Media files will be stored in the repo under this folder
 # public_folder: "/path/to/your/media" # The src attribute for uploaded media will begin with this folder
 
 collections:
@@ -82,5 +82,5 @@ collections:
         displayFields:
           - tagName
         valueField: tagName
-        multiple: "true,"
+        multiple: true
         required: false
