@@ -55,6 +55,8 @@ collections:
         required: false
       - label: Exact Start Date
         name: exactStartDate
+        default: ""
+        date_format: DD.MM.YYYY
         widget: date
         required: false
       - label: Year of Start
@@ -66,6 +68,8 @@ collections:
         required: false
       - label: Exact End Date
         name: exactEndDate
+        default: ""
+        date_format: DD.MM.YYYY
         widget: date
         required: false
       - label: Year of End
