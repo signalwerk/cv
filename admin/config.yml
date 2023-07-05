@@ -1,0 +1,86 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# media_folder: "path/to/your/media" # Media files will be stored in the repo under this folder
+# public_folder: "/path/to/your/media" # The src attribute for uploaded media will begin with this folder
+
+collections:
+  - name: "skills" # Used in routes, e.g., /admin/collections/skills
+    label: "Skills" # Used in the UI
+    folder: "_skills" # The path to the folder where the markdown files will be stored
+    create: true # Allow users to create new documents in this collection
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Skill Level
+        name: skillLevel
+        widget: number
+        valueType: int
+        min: 0
+        max: 100
+        required: false
+
+  - name: "tags" # Used in routes, e.g., /admin/collections/tags
+    label: "Tags" # Used in the UI
+    folder: "_tags" # The path to the folder where the markdown files will be stored
+    create: true # Allow users to create new documents in this collection
+    fields:
+      - label: Tag Name
+        name: tagName
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+        required: false
+
+  - name: "items" # Used in routes, e.g., /admin/collections/items
+    label: "Data Points" # Used in the UI
+    folder: "_items" # The path to the folder where the markdown files will be stored
+    create: true # Allow users to create new documents in this collection
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Institute/School
+        name: institute
+        widget: string
+        required: false
+      - label: Location
+        name: location
+        widget: string
+        required: false
+      - label: Exact Start Date
+        name: exactStartDate
+        widget: date
+        required: false
+      - label: Year of Start
+        name: startYear
+        widget: number
+        valueType: int
+        min: 1900
+        max: 2100
+        required: false
+      - label: Exact End Date
+        name: exactEndDate
+        widget: date
+        required: false
+      - label: Year of End
+        name: endYear
+        widget: number
+        valueType: int
+        min: 1900
+        max: 2100
+        required: false
+      - label: Tags
+        name: tags
+        widget: relation
+        collection: tags
+        searchFields:
+          - tagName
+        displayFields:
+          - tagName
+        valueField: tagName
+        multiple: "true,"
+        required: false
