@@ -10,7 +10,7 @@ media_folder: "path/to/your/media" # Media files will be stored in the repo unde
 collections:
   - name: "skills" # Used in routes, e.g., /admin/collections/skills
     label: "Skills" # Used in the UI
-    folder: "_skills" # The path to the folder where the markdown files will be stored
+    folder: "content/_skills" # The path to the folder where the markdown files will be stored
     create: true # Allow users to create new documents in this collection
     fields:
       - label: Title
@@ -26,7 +26,7 @@ collections:
 
   - name: "tags" # Used in routes, e.g., /admin/collections/tags
     label: "Tags" # Used in the UI
-    folder: "_tags" # The path to the folder where the markdown files will be stored
+    folder: "content/_tags" # The path to the folder where the markdown files will be stored
     create: true # Allow users to create new documents in this collection
     fields:
       - label: Tag Name
@@ -39,7 +39,7 @@ collections:
 
   - name: "items" # Used in routes, e.g., /admin/collections/items
     label: "Data Points" # Used in the UI
-    folder: "_items" # The path to the folder where the markdown files will be stored
+    folder: "content/_items" # The path to the folder where the markdown files will be stored
     create: true # Allow users to create new documents in this collection
     fields:
       - label: Title
@@ -85,4 +85,8 @@ collections:
           - tagName
         valueField: tagName
         multiple: true
+        required: false
+      - label: Notes
+        name: notes
+        widget: text
         required: false
