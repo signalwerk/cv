@@ -1,13 +1,13 @@
 import React, { Component, Suspense } from "react";
 
-import CurriculumVitae from "../../CurriculumVitae.mdx";
+/* eslint-disable import/no-webpack-loader-syntax */
+import LetterOfIntent from "../../LetterOfIntentCASDesignCulture.mdx";
 import { MDXProvider } from "@mdx-js/react";
 
 import Container from "../Container";
 import { HeadingH1, HeadingH2, HeadingH3, version } from "../Headings";
 
 import "../root";
-import "./styles.css";
 
 class App extends Component {
   render() {
@@ -22,9 +22,9 @@ class App extends Component {
         >
           <h1>Stefan Huber · Curriculum{"\u00A0"}Vitae</h1>
           <small>Updated · {version}</small>
-          <Suspense fallback={<div>Loading – Curriculum Vitae...</div>}>
-            <div className="app__part-cv">
-              <CurriculumVitae />
+          <Suspense fallback={<div>Loading – Letter of Intent...</div>}>
+            <div className="app__part-li">
+              <LetterOfIntent />
             </div>
           </Suspense>
         </MDXProvider>

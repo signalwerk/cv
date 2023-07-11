@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { hydrate, render } from "react-dom";
 import App from "./components/App/";
 import Fontra from "./components/Fontra/";
+import CASDesignCultures from "./components/CASDesignCultures/";
 import reportWebVitals from "./reportWebVitals";
 
 const rootElement = document.getElementById("root");
@@ -26,6 +27,7 @@ if (rootElement?.hasChildNodes()) {
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/fontra" element={<Fontra />} />
+          <Route path="/cas-design-cultures" element={<CASDesignCultures />} />
         </Routes>
       </Router>
     </React.StrictMode>,

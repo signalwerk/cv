@@ -57,7 +57,8 @@
   "reactSnap": {
     "include": [
       "/",
-      "/fontra"
+      "/fontra",
+      "/cas-design-cultures"
     ],
     "puppeteerArgs": [
       "--no-sandbox",
