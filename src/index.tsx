@@ -3,18 +3,26 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { hydrate, render } from "react-dom";
 import App from "./components/App/";
 import Fontra from "./components/Fontra/";
+import CASDesignCultures from "./components/CASDesignCultures/";
 import reportWebVitals from "./reportWebVitals";
 
 const rootElement = document.getElementById("root");
+
+function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/fontra" element={<Fontra />} />
+      <Route path="/cas-design-cultures" element={<CASDesignCultures />} />
+    </Routes>
+  );
+}
 
 if (rootElement?.hasChildNodes()) {
   hydrate(
     <React.StrictMode>
       <Router>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/fontra" element={<Fontra />} />
-        </Routes>
+        <AppRoutes />
       </Router>
     </React.StrictMode>,
     rootElement
@@ -23,10 +31,7 @@ if (rootElement?.hasChildNodes()) {
   render(
     <React.StrictMode>
       <Router>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/fontra" element={<Fontra />} />
-        </Routes>
+        <AppRoutes />
       </Router>
     </React.StrictMode>,
     rootElement
