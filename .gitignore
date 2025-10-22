@@ -25,3 +25,5 @@ yarn-error.log*
 # private data
 /DATA
 /src/LetterOfIntent
+**/__*
+/public/assets/**/*.tif
