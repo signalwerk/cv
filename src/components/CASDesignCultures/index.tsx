@@ -1,7 +1,7 @@
-import React, { Component, Suspense } from "react";
+import { Component, Suspense } from "react";
 
 /* eslint-disable import/no-webpack-loader-syntax */
-import LetterOfIntent from "../../LetterOfIntentFontra.mdx";
+import LetterOfIntent from "../../LetterOfIntentCASDesignCulture.mdx";
 import { MDXProvider } from "@mdx-js/react";
 
 import Container from "../Container";

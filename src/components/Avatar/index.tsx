@@ -1,10 +1,13 @@
-import React from "react";
 import { ListRoot, ListItem, ListCol } from "../List";
 import "./styles.css";
 
-const Avatar = ({ children }) => (
+interface AvatarProps {
+  children?: React.ReactNode;
+}
+
+const Avatar: React.FC<AvatarProps> = () => (
   <div className="avatar">
-    <ListRoot>
+    <ListRoot className="">
       <ListItem>
         <ListCol column={0} noInner={true}>
           <span className="avatar--icon">

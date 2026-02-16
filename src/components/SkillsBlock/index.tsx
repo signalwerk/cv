@@ -1,8 +1,11 @@
-import React from "react";
 import { ListRoot, ListItem } from "../List";
 import "./styles.css";
 
-const Skills = ({ children }) => {
+interface SkillsProps {
+  children: React.ReactNode;
+}
+
+const Skills: React.FC<SkillsProps> = ({ children }) => {
   return (
     <div>
       <ListRoot className="skills">

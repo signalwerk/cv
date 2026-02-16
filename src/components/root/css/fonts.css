@@ -18,7 +18,8 @@
   --open-sans-fea-tnum: "tnum" off;
   --open-sans-fea-zero: "zero" off;
 
-  font-feature-settings: var(--open-sans-fea-aalt), var(--open-sans-fea-dnom),
+  font-feature-settings:
+    var(--open-sans-fea-aalt), var(--open-sans-fea-dnom),
     var(--open-sans-fea-frac), var(--open-sans-fea-liga),
     var(--open-sans-fea-lnum), var(--open-sans-fea-locl),
     var(--open-sans-fea-numr), var(--open-sans-fea-onum),

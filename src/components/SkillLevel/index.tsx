@@ -1,16 +1,18 @@
-import React from "react";
 import { ListRoot, ListItem, ListCol } from "../List";
-import TrackVisibility from "react-on-screen";
 import "./styles.css";
 
-const SkillLevel = ({ data }) => {
+interface SkillLevelProps {
+  data: string;
+}
+
+const SkillLevel: React.FC<SkillLevelProps> = ({ data }) => {
   return (
-    <ListRoot>
+    <ListRoot className="">
       {data
         .trim()
         .split("\n")
-        .map((item) => item.replace(/^\*[ ]*/, ""))
-        .map((line, indexLine) => {
+        .map((item: string) => item.replace(/^\*[ ]*/, ""))
+        .map((line: string, indexLine: number) => {
           let parts = line.split("|");
 
           return (
@@ -24,16 +26,7 @@ const SkillLevel = ({ data }) => {
                       width: `${parseInt(parts[0])}%`,
                     }}
                   >
-                    <TrackVisibility tag="span" once={true}>
-                      {({ isVisible }) => (
-                        <span
-                          className="skillevel__level-fill"
-                          style={{
-                            width: `${isVisible ? 100 : 0}%`,
-                          }}
-                        />
-                      )}
-                    </TrackVisibility>
+                    <span className="skillevel__level-fill" />
                   </span>
                 </span>
               </ListCol>

@@ -1,4 +1,4 @@
-import React, { Component, Suspense } from "react";
+import { Component, Suspense } from "react";
 
 import CurriculumVitae from "../../CurriculumVitae.mdx";
 import { MDXProvider } from "@mdx-js/react";

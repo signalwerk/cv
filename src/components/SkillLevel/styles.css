@@ -12,14 +12,34 @@
 }
 
 .skillevel__level-fill {
-  transition: width 350ms;
   background-color: #004b5f;
   height: 0.5rem;
   display: block;
+  width: 100%; /* Fallback for browsers without scroll-driven animations */
+}
+
+/* Modern browsers with scroll-driven animations support */
+@supports (animation-timeline: view()) {
+  .skillevel__level-fill {
+    width: 0;
+    animation: skill-slide-in 350ms ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 10%;
+  }
+}
+
+@keyframes skill-slide-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @media print {
   .skillevel__level-fill {
     width: 100% !important;
+    animation: none !important;
   }
 }

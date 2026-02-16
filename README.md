@@ -4,4 +4,35 @@
 
 Curriculum Vitae of [→ Stefan Huber](https://cv.signalwerk.ch). Source code on [GitHub repository](https://github.com/signalwerk/cv).
 
-This project was bootstrapped with [Create React App](https://create-react-app.dev/).
+This project uses [Vite](https://vitejs.dev/) + [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) with **static site generation (SSG)** using React's server-side rendering.
+
+## Features
+
+- ✨ **Static HTML Generation**: All pages pre-rendered with full content visible to search engines
+- ⚡ **Fast Dev Server**: Vite's instant HMR for rapid development
+- 📦 **TypeScript**: Full type safety across the entire codebase
+- 🎨 **MDX Support**: Write content in Markdown with React components
+- 🔄 **Hydration**: Client-side React hydrates the static HTML for interactivity
+
+## Development
+
+```bash
+npm install   # Install dependencies
+npm run dev   # Start dev server
+npm run build # Build for production (static HTML + client bundle)
+```
+
+## Static Site Generation
+
+The build creates fully static HTML pages using React's `renderToString` (no Puppeteer/headless browsers):
+
+1. Client bundle is built with Vite
+2. Server bundle is built for SSR
+3. Each route is rendered to static HTML
+4. Client bundle hydrates the static content
+
+Routes generated:
+
+- `/` - Main CV page
+- `/fontra` - Letter of Intent for Fontra
+- `/cas-design-cultures` - Letter of Intent for CAS Design Culture

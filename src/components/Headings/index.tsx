@@ -1,5 +1,10 @@
 import React from "react";
 
+interface HeadingProps {
+  level: 1 | 2 | 3 | 4 | 5 | 6;
+  children?: React.ReactNode;
+}
+
 function Icon() {
   return (
     <svg
@@ -12,7 +17,8 @@ function Icon() {
     </svg>
   );
 }
-function headingToSlug(heading) {
+
+function headingToSlug(heading: React.ReactNode): string {
   let newHeading = "";
 
   if (typeof heading === "string") {
@@ -32,10 +38,11 @@ function headingToSlug(heading) {
 
   return newHeading;
 }
-const Heading = ({ level, children }) => {
+
+const Heading: React.FC<HeadingProps> = ({ level, children }) => {
   const slug = headingToSlug(children);
 
-  const Component = `h${level}`;
+  const Component = `h${level}` as keyof JSX.IntrinsicElements;
 
   return (
     <Component id={slug}>
@@ -46,14 +53,23 @@ const Heading = ({ level, children }) => {
     </Component>
   );
 };
-export const HeadingH1 = (props) => <Heading level={1} {...props} />;
-export const HeadingH2 = (props) => <Heading level={2} {...props} />;
-export const HeadingH3 = (props) => <Heading level={3} {...props} />;
-const options = {
+
+export const HeadingH1: React.FC<{ children?: React.ReactNode }> = (props) => (
+  <Heading level={1} {...props} />
+);
+export const HeadingH2: React.FC<{ children?: React.ReactNode }> = (props) => (
+  <Heading level={2} {...props} />
+);
+export const HeadingH3: React.FC<{ children?: React.ReactNode }> = (props) => (
+  <Heading level={3} {...props} />
+);
+
+const options: Intl.DateTimeFormatOptions = {
   year: "numeric",
   month: "long",
   day: "numeric",
 };
+
 export const version = new Date(
-  process.env.REACT_APP_BUILD_TIME * 1000
+  Number(import.meta.env.VITE_BUILD_TIME || Date.now()),
 ).toLocaleDateString("en-US", options);

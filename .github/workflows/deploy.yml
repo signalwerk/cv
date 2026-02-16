@@ -1,49 +1,52 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🚚 Checkout repository
-        uses: actions/checkout@v2
+      - name: 🚚 Checkout
+        uses: actions/checkout@v4
 
-      - name: 📖 Read .nvmrc
-        run: echo NVMRC=`cat .nvmrc` >> $GITHUB_ENV
-
-      - name: ⚡ Set up Node.js ${{ env.NVMRC }}
-        uses: actions/setup-node@v2
+      - name: ⚡ Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NVMRC }}
+          cache: npm
 
-      - name: 📦 Cache dependencies
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ env.NVMRC }}-${{ hashFiles('**/package-lock.json') }}
-
-      - name: ⚙️ Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
+      - name: 📦 Install dependencies
         run: npm ci
 
       - name: 🔨 Build
         run: npm run build
 
-      - name: 🚀 Deploy
-        run: |
-          git config --global user.name $user_name
-          git config --global user.email $user_email
-          git remote set-url origin https://${github_token}@github.com/${repository}
-          npm run deploy
-        env:
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
-          github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-          repository: ${{ github.repository }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: 📤 Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
