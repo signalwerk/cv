@@ -30,9 +30,3 @@ The build creates fully static HTML pages using React's `renderToString` (no Pup
 2. Server bundle is built for SSR
 3. Each route is rendered to static HTML
 4. Client bundle hydrates the static content
-
-Routes generated:
-
-- `/` - Main CV page
-- `/fontra` - Letter of Intent for Fontra
-- `/cas-design-cultures` - Letter of Intent for CAS Design Culture
