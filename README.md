@@ -4,7 +4,7 @@
 
 Curriculum Vitae of [→ Stefan Huber](https://cv.signalwerk.ch). Source code on [GitHub repository](https://github.com/signalwerk/cv).
 
-This project uses [Vite](https://vitejs.dev/) + [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) with **static site generation (SSG)** using React's server-side rendering.
+This project uses [Node.js](https://nodejs.org/) + [Vite](https://vitejs.dev/) + [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) with **static site generation (SSG)** using React's server-side rendering.
 
 ## Features
 

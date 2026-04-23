@@ -1,10 +1,22 @@
-import fromMarkdown, { mdTypes, mdToken } from "mdast-util-from-span-markdown";
+import fromMarkdownModule, {
+  mdTypes,
+  type mdToken,
+} from "mdast-util-from-span-markdown";
+
+type FromMarkdown = (md: string, rule?: number) => mdToken[];
+type FromMarkdownInterop = FromMarkdown | { default: FromMarkdown };
+const fromMarkdownImport = fromMarkdownModule as FromMarkdownInterop;
+
+const fromMarkdown =
+  typeof fromMarkdownImport === "function"
+    ? fromMarkdownImport
+    : fromMarkdownImport.default;
 
 export type markdownProps = {
   text: string;
 };
 
-const obj2jsx = (token: mdToken, key: number): JSX.Element => {
+const obj2jsx = (token: mdToken, key: number): React.JSX.Element => {
   switch (token.type) {
     case mdTypes.INLINE_CODE:
       return <code key={key}>{token.value}</code>;

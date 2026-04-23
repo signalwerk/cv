@@ -42,7 +42,7 @@ function headingToSlug(heading: React.ReactNode): string {
 const Heading: React.FC<HeadingProps> = ({ level, children }) => {
   const slug = headingToSlug(children);
 
-  const Component = `h${level}` as keyof JSX.IntrinsicElements;
+  const Component = `h${level}` as React.ElementType;
 
   return (
     <Component id={slug}>

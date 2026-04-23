@@ -2,7 +2,7 @@ import App from "./components/App/";
 import Fontra from "./components/Fontra/";
 import CASDesignCultures from "./components/CASDesignCultures/";
 import { routePaths } from "./route-paths";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router";
 
 // Helper to find route by name
 const getRoute = (name: string) => routePaths.find((r) => r.name === name)!;
